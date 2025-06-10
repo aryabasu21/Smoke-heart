@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- coding by Arya Basu -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smoke heart Sunfire</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- 🎵 Background music -->
+    <audio
+      id="bg-music"
+      src="Ishq Hai X O Rangrez - PagalMass.mp3"
+      autoplay
+      loop
+    ></audio>
+
+    <canvas id="heart"></canvas>
+
+    <div class="smoke">
+      <span>Will</span>
+      <span>&nbsp;</span>
+      <span>You</span>
+      <span>&nbsp;</span>
+      <span>Be</span>
+      <span>&nbsp;</span>
+      <span>Mine ?</span>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- 🎧 Fallback for autoplay block (some browsers require user interaction) -->
+    <script>
+      window.addEventListener(
+        "click",
+        () => {
+          const music = document.getElementById("bg-music");
+          music.play().catch((e) => {
+            console.warn("Autoplay failed:", e);
+          });
+        },
+        { once: true }
+      );
+    </script>
+  </body>
+</html>
