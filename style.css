@@ -42,7 +42,7 @@ canvas {
 .smoke span {
   position: relative;
   color: #fff;
-  font-family: 'Tangerine', cursive, sans-serif;
+  font-family: "Tangerine", cursive, sans-serif;
   font-size: 2.5em;
   font-weight: bold;
   letter-spacing: 10px;
@@ -54,28 +54,38 @@ canvas {
   color: #b61b1b;
 }
 
+@media (max-width: 600px) {
+  .smoke {
+    bottom: 5%;
+  }
+  .smoke span {
+    font-size: 1.5em;
+    letter-spacing: 4px;
+  }
+}
+
 /* Fade-in animation for the text */
 @keyframes fade {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 /* Blur animation for the text */
 @keyframes animate {
   0% {
-      filter: blur(0);
+    filter: blur(0);
   }
   40% {
-      filter: blur(20px);
+    filter: blur(20px);
   }
   80% {
-      filter: blur(0);
+    filter: blur(0);
   }
   100% {
-      filter: blur(0);
+    filter: blur(0);
   }
 }
